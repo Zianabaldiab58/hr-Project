@@ -12,10 +12,15 @@ public class ProposalAges {
         for (int i = 0; i < numProposals; i++) {
             System.out.print("Age " + (i + 1) + ": ");
             ages[i] = scanner.nextInt();
-        }scanner.close();
-        Arrays.sort(ages); // Sort the array in ascending order
-        printAges(ages);}
 
+            // Set age to 0 if the person is under 18
+            if (ages[i] < 18) {
+                ages[i] = 0;
+            }
+        }
+        scanner.close();
+        printAges(ages);
+    }
     public static void printAges(int[] ages) {
         System.out.println("\nAges of people who made proposals:");
         // Print ages in reverse order for descending sort
