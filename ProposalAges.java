@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;// Import Arrays class for sorting
 
 public class ProposalAges {
 
@@ -12,11 +13,13 @@ public class ProposalAges {
             System.out.print("Age " + (i + 1) + ": ");
             ages[i] = scanner.nextInt();
         }scanner.close();
+        Arrays.sort(ages); // Sort the array in ascending order
         printAges(ages);}
 
     public static void printAges(int[] ages) {
         System.out.println("\nAges of people who made proposals:");
-        for (int age : ages) {
-            System.out.println(age + " years old");
+        // Print ages in reverse order for descending sort
+        for (int i = ages.length - 1; i >= 0; i--) {
+            System.out.println(ages[i] + " years old");
         }
     }}
