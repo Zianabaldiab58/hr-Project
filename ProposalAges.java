@@ -22,6 +22,6 @@ public class ProposalAges {
     public static void printAges(int[] ages) {
         System.out.println("\nAges of people who made proposals:");
         for (int age : ages) {
-            System.out.println(age + " years old");
+            System.out.println(age + " years old ");
         }
     }}
