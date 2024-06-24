@@ -29,12 +29,17 @@ public class ProposalAges {
         System.out.println("\nNumber of people eligible to meet the team: " + countEligible);}
     public static void printAges(Integer[] ages) {
         System.out.println("\nAges of people who made proposals:");
+
+        for (int age : ages) {
+            System.out.println(age + " years old ");
+
         for (Integer age : ages) {
             if (age == 0) {
                 System.out.println("can't meet the team"); // Print this for ineligible participants
             } else {
                 System.out.println(age + " years old"); // Print age for eligible participants
             }
+
         }
     }
 }
